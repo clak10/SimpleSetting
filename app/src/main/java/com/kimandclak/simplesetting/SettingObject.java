@@ -1,5 +1,6 @@
 package com.kimandclak.simplesetting;
 
+import android.support.annotation.NonNull;
 import android.view.View;
 
 public class SettingObject {
@@ -7,7 +8,7 @@ public class SettingObject {
     public String mDescription;
     public View mSettingsView;
 
-    public SettingObject(String mainText, String descriptions, View settingsView) {
+    public SettingObject(String mainText, String descriptions, @NonNull View settingsView) {
         mMainText = mainText;
         mDescription = descriptions;
         mSettingsView = settingsView;
