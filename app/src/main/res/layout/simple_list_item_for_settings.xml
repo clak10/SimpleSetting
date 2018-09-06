@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
@@ -17,33 +19,29 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/switch_text1"
+            android:id="@+id/view_text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:gravity="center_vertical|start"
             android:singleLine="true"
             android:textAppearance="?attr/textAppearanceListItem"
-            android:textColor="?attr/textColorAlertDialogListItem" />
+            android:textColor="?attr/textColorAlertDialogListItem"
+            tools:text="One" />
 
         <TextView
-            android:id="@+id/switch_text2"
+            android:id="@+id/view_text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:gravity="center_vertical|start"
             android:singleLine="true"
             android:textAppearance="?attr/textAppearanceListItemSecondary"
-            android:textColor="?attr/textColorAlertDialogListItem" />
+            android:textColor="?attr/textColorAlertDialogListItem"
+            tools:text="This is one" />
 
     </LinearLayout>
 
-    <android.support.v7.widget.SwitchCompat
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:focusable="false"
-        android:gravity="center_vertical" />
+
 
 </LinearLayout>
