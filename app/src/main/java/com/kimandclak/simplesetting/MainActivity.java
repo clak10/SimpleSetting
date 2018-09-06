@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         SettingObject ob4 = new SettingObject("Four", "this is four"){
             @Override
             public void onClick() {
-                Toast.makeText(MainActivity.this, "frog jump 1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "frog jump 4", Toast.LENGTH_SHORT).show();
             }
         };
         arrayList.add(ob4);
