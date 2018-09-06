@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
         SwitchCompat s2 = new SwitchCompat(this);
         SettingObject ob2 = new SettingObject("Two", "this is two", s2);
 
-        arrayList.add(ob1);
-        arrayList.add(ob2);
 
-        arrayList.add(new SettingObject("Three", "this is three", new AppCompatCheckBox(this)));
+        AppCompatCheckBox c1 = new AppCompatCheckBox(this);
+        SettingObject ob3 = new SettingObject("Three", "this is three", c1);
+
 
         SettingObject ob4 = new SettingObject("Four", "this is four"){
             @Override
@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "frog jump 4", Toast.LENGTH_SHORT).show();
             }
         };
+
+        arrayList.add(ob1);
+        arrayList.add(ob2);
+        arrayList.add(ob3);
         arrayList.add(ob4);
 
         //Set listener to create a toast when switch state is changed.
@@ -50,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "frog jump 2", Toast.LENGTH_SHORT).show();
             else
                 Toast.makeText(this, "no frog jump 2", Toast.LENGTH_SHORT).show();
+        });
+
+        //Set listener to create a toast when on checking the checkBox.
+        c1.setOnCheckedChangeListener((e, f) -> {
+            if (c1.isChecked())
+                Toast.makeText(this, "frog jump 3", Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(this, "no frog jump 3", Toast.LENGTH_SHORT).show();
         });
 
 
